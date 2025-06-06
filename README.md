@@ -6,3 +6,4 @@ Progrss will start on the CPU as it is nearly identical to Switch 1, and later o
 Users will need to dump their own firmware or get it from big N's update servers to use Pound.
 
 Pound will likely use some code from other Switch 1 emulators such as Yuzu and will specify which ones in the documentation.
+
