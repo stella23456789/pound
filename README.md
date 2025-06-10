@@ -1,4 +1,7 @@
 # Pound emulator
+
+## Devlopment is mostly halted on the backend until it is possible to dump Switch 2 firmware
+
 Pound is likely the first real contendor as a Switch 2 emulator.
 
 Progress will start on the CPU as it is nearly identical to Switch 1, and later on smoothing out the differences between the two hardware.
