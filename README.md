@@ -2,11 +2,14 @@
 Also check out [obomori](https://github.com/Nikilites/oboromi), another emulator like Pound!
 
 ### Build status
-
+#### Linux
 <a><img src="https://img.shields.io/badge/current Linux x64 build-none-aaaaaa.svg"></a>
 <a><img src="https://img.shields.io/badge/current Linux A64 build-none-aaaaaa.svg"></a>
+#### Android
 <a><img src="https://img.shields.io/badge/current Android A64 build-none-aaaaaa.svg"></a>
-
+#### macOS
+<a><img src="https://img.shields.io/badge/current Darwin x64 build-none-aaaaaa.svg"></a>
+<a><img src="https://img.shields.io/badge/current Darwin A64 build-none-aaaaaa.svg"></a>
 ## Overview
 
 **Pound** aims to be one of the first functional emulators for the **Nintendo Switch 2**.
