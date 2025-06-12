@@ -1,11 +1,25 @@
-# Pound emulator
+# Pound
 
-## Devlopment is mostly halted on the backend until it is possible to dump Switch 2 firmware
+> ⚠️ **Development Notice:**
+> Backend development is currently on hold until it becomes possible to dump firmware from a Nintendo Switch 2 console.
 
-Pound is likely the first real contendor as a Switch 2 emulator.
+## Overview
 
-Progress will start on the CPU as it is nearly identical to Switch 1, and later on smoothing out the differences between the two hardware.
+**Pound** aims to be one of the first functional emulators for the **Nintendo Switch 2**.
 
-Users will need to dump their own firmware from their own Switch 2 console to use Pound (dump in /assets/fw/)
+Development will begin with the **CPU**, as its architecture is nearly identical to the original Switch. After that, work will focus on bridging the differences between the two hardware generations.
 
-Pound will likely use some code from other Switch 1 emulators such as Yuzu and will specify which code in the documentation.
+## Firmware Requirement
+
+To use Pound, you **will** need to **dump your own Switch 2 firmware** and place it in the following directory:
+
+```
+/assets/fw/
+```
+
+No firmware or system files are provided with this emulator.
+
+## Codebase
+
+Pound may reuse certain components from existing Nintendo Switch 1 emulators, such as **Yuzu**.
+All reused code will be explicitly documented and credited in the appropriate sections of the repository.
