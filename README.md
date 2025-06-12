@@ -4,6 +4,12 @@ Also check out [obomori](https://github.com/Nikilites/oboromi), another emulator
 > ⚠️ **Development Notice:**
 > Backend development is currently on hold until it becomes possible to dump firmware from a Nintendo Switch 2 console.
 
+### Build status
+
+<a><img src="https://img.shields.io/badge/current Linux x64 build-none-aaaaaa.svg"></a>
+<a><img src="https://img.shields.io/badge/current Linux A64 build-none-aaaaaa.svg"></a>
+<a><img src="https://img.shields.io/badge/current Android A64 build-none-aaaaaa.svg"></a>
+
 ## Overview
 
 **Pound** aims to be one of the first functional emulators for the **Nintendo Switch 2**.
