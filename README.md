@@ -1,9 +1,6 @@
 # Pound
 Also check out [obomori](https://github.com/Nikilites/oboromi), another emulator like Pound!
 
-> ⚠️ **Development Notice:**
-> Backend development is currently on hold until it becomes possible to dump firmware from a Nintendo Switch 2 console.
-
 ### Build status
 
 <a><img src="https://img.shields.io/badge/current Linux x64 build-none-aaaaaa.svg"></a>
@@ -18,7 +15,7 @@ Development will begin with the **CPU**, as its architecture is nearly identical
 
 ## Firmware Requirement
 
-To use Pound, you **will** need to **dump your own Switch 2 firmware** and place it in the following directory:
+To use Pound, you **will** need to **dump your own Switch or Switch 2 firmware** and place it in the following directory:
 
 ```
 /assets/fw/
