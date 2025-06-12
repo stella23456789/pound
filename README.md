@@ -1,4 +1,5 @@
 # Pound
+Also check out [obomori](https://github.com/Nikilites/oboromi), another emulator like Pound!
 
 > ⚠️ **Development Notice:**
 > Backend development is currently on hold until it becomes possible to dump firmware from a Nintendo Switch 2 console.
