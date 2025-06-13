@@ -1,7 +1,10 @@
-#include "core/ARM/cpu.h"
-#include "core/JIT/jit.h"
+#include "cpu.h"
+#include "jit.h"
 
-int main() {
+#include <cstdio>
+
+int main()
+{
     CPU cpu;
     cpu.pc = 0;
 

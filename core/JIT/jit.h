@@ -1,10 +1,11 @@
 #ifndef JIT_H
 #define JIT_H
-#include "core/ARM/cpu.h"
+#include "cpu.h"
 
-class JIT {
+class JIT
+{
 public:
-    void translate_and_run(CPU& cpu);
+    void translate_and_run(CPU &cpu);
 };
 
 #endif
