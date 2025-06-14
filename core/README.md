@@ -1,4 +1,4 @@
-# Assets folder
+# Core folder
 
 ### !! The file system implementation is copied from Yuzu as the filesystem is believed to be the same betweeen both consoles
 

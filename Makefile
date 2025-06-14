@@ -4,7 +4,7 @@ CXXFLAGS := -std=c++17 -Wall -Wextra -Icore -Icore/ARM -Icore/audio -Icore/fs -I
 SRC := \
     ui/main.cpp \
     core/audio/audio.cpp \
-    core/fs/fs.cpp \
+    core/fs/romfs.cpp \
     core/gpu/emu/emugpu.cpp \
     core/gpu/vk/emugpuvk.cpp \
     core/JIT/jit.cpp
