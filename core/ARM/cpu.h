@@ -1,6 +1,7 @@
 #ifndef CPU_H
 #define CPU_H
 #include <cstdint>
+#include <cstdio>
 #include <cstring>
 
 struct CPU {
@@ -15,14 +16,14 @@ struct CPU {
 
     uint8_t read_byte(uint64_t addr) {
         if (addr >= MEM_SIZE) {
-            printf("%s out of bounds\n", addr);
+            printf("%ld out of bounds\n", addr);
         }
         return memory[addr];
     }
 
     void write_byte(uint64_t addr, uint8_t byte) {
         if (addr >= MEM_SIZE) {
-            printf("%s out of bounds\n", addr);
+            printf("%ld out of bounds\n", addr);
         }
         memory[addr] = byte;
     }
