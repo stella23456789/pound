@@ -11,7 +11,28 @@ struct CPU {
 
     CPU() { std::memset(memory, 0, MEM_SIZE); }
 
-    uint64_t& x(int i) { return regs[i]; }
+    uint64_t &x(int i) { return regs[i]; }
+
+    uint8_t read_byte(uint64_t addr) {
+        if (addr >= MEM_SIZE) {
+            printf("%s out of bounds\n", addr);
+        }
+        return memory[addr];
+    }
+
+    void write_byte(uint64_t addr, uint8_t byte) {
+        if (addr >= MEM_SIZE) {
+            printf("%s out of bounds\n", addr);
+        }
+        memory[addr] = byte;
+    }
+
+    void print_debug_information() {
+        printf("PC = %lu\n", pc);
+        for (int reg = 0; reg < 32; reg++) {
+            printf("X%i = %lu\n", reg, x(reg)); // X0 = 0...
+        }
+    }
 };
 
 #endif
