@@ -8,4 +8,4 @@ Directories:
 
 /core/gpu/emu/ - OpenGL EmuGPU (macOS, Android)
 
-/core/gpu/vk/ - Vulkan EmuGPU (Linux)
+/core/gpu/vk/ - Vulkan EmuGPU (Linux, Android)
