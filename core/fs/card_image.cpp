@@ -4,17 +4,17 @@
 #include <array>
 #include <string>
 
-#include <fmt/ostream.h>
+#include <fmt/ostream.h> //can't find that yet (ownedbywuigi)
 
-#include "common/logging/log.h"
-#include "core/crypto/key_manager.h"
-#include "core/file_sys/card_image.h"
-#include "core/file_sys/content_archive.h"
-#include "core/file_sys/nca_metadata.h"
-#include "core/file_sys/partition_filesystem.h"
-#include "core/file_sys/submission_package.h"
-#include "core/file_sys/vfs/vfs_offset.h"
-#include "core/file_sys/vfs/vfs_vector.h"
+#include "import/common/logging/log.h"
+#include "import/core/crypto/key_manager.h"
+#include "core/fs/card_image.h"
+#include "core/fs/content_archive.h"
+#include "core/fs/nca_metadata.h"
+#include "core/fs/partition_filesystem.h"
+#include "core/fs/submission_package.h"
+#include "core/fs/vfs/vfs_offset.h"
+#include "core/fs/vfs/vfs_vector.h"
 #include "core/loader/loader.h"
 
 namespace FileSys {
