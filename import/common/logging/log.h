@@ -8,8 +8,8 @@
 
 #include <fmt/format.h>
 
-#include "common/logging/formatter.h"
-#include "common/logging/types.h"
+#include "import/common/logging/formatter.h"
+#include "import/common/logging/types.h"
 
 namespace Common::Log {
 
