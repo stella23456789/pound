@@ -1,6 +1,8 @@
 // SPDX-FileCopyrightText: Copyright 2018 yuzu Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+// Modified by Pound emulator for SW2 compatibility
+
 #pragma once
 
 #include <memory>

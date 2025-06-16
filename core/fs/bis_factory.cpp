@@ -1,6 +1,8 @@
 // SPDX-FileCopyrightText: Copyright 2018 yuzu Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+// Modified by Pound emulator for SW2 compatibility
+
 #include <fmt/format.h> //can't find that yet (ownedbywuigi)
 #include "import/common/fs/path_util.h"
 #include "core/fs/bis_factory.h"

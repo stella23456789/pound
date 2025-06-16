@@ -1,14 +1,16 @@
 // SPDX-FileCopyrightText: Copyright 2018 yuzu Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+// Modified by Pound emulator for SW2 compatibility
+
 #pragma once
 
 #include <array>
 #include <memory>
 #include <vector>
-#include "common/common_types.h"
-#include "common/swap.h"
-#include "core/file_sys/vfs/vfs.h"
+#include "import/common/common_types.h"
+#include "import/common/swap.h"
+#include "core/fs/vfs/vfs.h"
 
 namespace Core::Crypto {
 class KeyManager;
