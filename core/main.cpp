@@ -1,5 +1,5 @@
-#include "cpu.h"
-#include "jit.h"
+#include "ARM/cpu.h"
+#include "JIT/jit.h"
 
 #include <cstdio>
 
@@ -20,6 +20,6 @@ int main() {
 
     cpu.print_debug_information();
 
-    printf("X0 = %lu\n", cpu.x(0));
+    printf("X0 = %llu\n", cpu.x(0));
     return 0;
 }

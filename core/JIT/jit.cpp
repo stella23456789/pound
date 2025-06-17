@@ -1,5 +1,11 @@
 #include "jit.h"
+
+#ifdef WIN32
+#include <Windows.h>
+#else
 #include <sys/mman.h>
+#endif
+
 #include <cstring>
 #include <cstdio>
 #include <vector>
@@ -8,8 +14,12 @@ using JitFunc = void (*)();
 
 void JIT::translate_and_run(CPU &cpu)
 {
-    uint8_t *code = (uint8_t *)mmap(nullptr, 64, PROT_READ | PROT_WRITE | PROT_EXEC,
-                                    MAP_PRIVATE | MAP_ANON, -1, 0);
+#ifdef WIN32
+    uint8_t *code = (uint8_t*)VirtualAlloc(NULL, 64, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
+#else
+    uint8_t *code = (uint8_t *)mmap(nullptr, 64, PROT_READ | PROT_WRITE | PROT_EXEC, MAP_PRIVATE | MAP_ANON, -1, 0);
+#endif
+
     size_t offset = 0;
 
     // Decode mock instructions from cpu.memory
