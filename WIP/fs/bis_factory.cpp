@@ -3,8 +3,8 @@
 
 // Modified by Pound emulator for SW2 compatibility
 
-#include <import/fmt/format.cc>
-#include "import/common/fs/path_util.h"
+#include <fmt/format.cc>
+#include "core/common/fs/path_util.h"
 #include "core/fs/bis_factory.h"
 #include "core/fs/registered_cache.h"
 #include "core/fs/vfs/vfs.h"
