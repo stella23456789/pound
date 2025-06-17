@@ -1,6 +1,8 @@
 <h1 align="center">
 <img src="/assets/Logo(1024x1024).webp" height="150px">
-  <br>
+<br><br>
+<img src="https://img.shields.io/github/stars/OwnedByWuigi/pound" width="80">
+<br><br>
 Pound
 </h1>
 
