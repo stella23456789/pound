@@ -10,8 +10,8 @@ Also check out [obomori](https://github.com/Nikilites/oboromi), another emulator
 #### Android
 <a><img src="https://img.shields.io/badge/current Android A64 build-soon-cc00cc.svg"></a>
 #### macOS
-<a><img src="https://img.shields.io/badge/current Darwin x64 build-none-aaaaaa.svg"></a>
-<a><img src="https://img.shields.io/badge/current Darwin A64 build-none-aaaaaa.svg"></a>
+<a><img src="https://img.shields.io/badge/current Darwin x64 build-soon-cc00cc.svg"></a>
+<a><img src="https://img.shields.io/badge/current Darwin A64 build-soon-cc00cc.svg"></a>
 
 #### Windows
 <a><img src="https://img.shields.io/badge/current Windows x64 build-soon-cc00cc.svg"></a>
