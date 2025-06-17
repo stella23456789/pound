@@ -16,22 +16,22 @@ struct CPU {
 
     uint8_t read_byte(uint64_t addr) {
         if (addr >= MEM_SIZE) {
-            printf("%ld out of bounds\n", addr);
+            printf("%llu out of bounds\n", addr);
         }
         return memory[addr];
     }
 
     void write_byte(uint64_t addr, uint8_t byte) {
         if (addr >= MEM_SIZE) {
-            printf("%ld out of bounds\n", addr);
+            printf("%llu out of bounds\n", addr);
         }
         memory[addr] = byte;
     }
 
     void print_debug_information() {
-        printf("PC = %lu\n", pc);
+        printf("PC = %llu\n", pc);
         for (int reg = 0; reg < 32; reg++) {
-            printf("X%i = %lu\n", reg, x(reg)); // X0 = 0...
+            printf("X%i = %llu\n", reg, x(reg)); // X0 = 0...
         }
     }
 };

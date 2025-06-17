@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include "import/common/common_types.h"
+#include "common/common_types.h"
 
 namespace Common::Log {
 
