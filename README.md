@@ -1,4 +1,6 @@
 # Pound
+> “i think of getting pounded when i see that [name]” - Satisfied Customer
+
 Also check out [obomori](https://github.com/Nikilites/oboromi), another emulator like Pound!
 
 ### Build status
