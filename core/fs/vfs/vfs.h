@@ -11,10 +11,10 @@
 #include <type_traits>
 #include <vector>
 
-#include "common/common_funcs.h"
+#include "core/fs/common_funcs.h"
 #include "common/common_types.h"
-#include "core/file_sys/fs_filesystem.h"
-#include "core/file_sys/vfs/vfs_types.h"
+#include "core/fs/fs_filesystem.h"
+#include "core/fs/vfs/vfs_types.h"
 
 namespace FileSys {
 
