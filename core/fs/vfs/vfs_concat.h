@@ -6,7 +6,7 @@
 #include <compare>
 #include <map>
 #include <memory>
-#include "core/file_sys/vfs/vfs.h"
+#include "core/fs/vfs/vfs.h"
 
 namespace FileSys {
 

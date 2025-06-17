@@ -5,7 +5,7 @@
 
 #include <string_view>
 #include <vector>
-#include "core/file_sys/vfs/vfs.h"
+#include "core/fs/vfs/vfs.h"
 
 namespace FileSys {
 
