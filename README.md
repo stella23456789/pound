@@ -2,6 +2,7 @@
 <img src="/assets/Logo(1024x1024).webp" height="150px">
 <br><br>
 <img src="https://img.shields.io/github/stars/OwnedByWuigi/pound" width="80">
+  <a href="https://github.com/OwnedByWuigi/pound/actions"><img src="https://img.shields.io/badge/Latest universal build-are here-aa00aa.svg"></a>
 <br><br>
 Pound
 </h1>
