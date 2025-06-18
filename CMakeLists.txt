@@ -43,4 +43,6 @@ if (WIN32)
 
   # Disables Warnings
   add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
+
+  target_sources(Pound PRIVATE core/Pound.rc)
 endif()
