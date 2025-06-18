@@ -12,6 +12,11 @@ if (NOT TARGET fmt::fmt)
   add_subdirectory(fmt)
 endif()
 
+# rem
+#if (NOT TARGET rem)
+#  add_subdirectory(rem)
+#endif()
+
 # Toml11
 if (NOT TARGET toml11::toml11)
   add_subdirectory(toml11)
