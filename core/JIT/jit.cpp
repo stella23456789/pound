@@ -1,3 +1,5 @@
+// Copyright 2025 Pound Emulator Project. All rights reserved.
+
 #include "jit.h"
 
 #ifdef WIN32
@@ -6,8 +8,6 @@
 #include <sys/mman.h>
 #endif
 
-#include <cstring>
-#include <cstdio>
 #include <vector>
 
 using JitFunc = void (*)();
@@ -15,9 +15,9 @@ using JitFunc = void (*)();
 void JIT::translate_and_run(CPU &cpu)
 {
 #ifdef WIN32
-    uint8_t *code = (uint8_t*)VirtualAlloc(NULL, 64, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
+    u8 *code = (u8 *)VirtualAlloc(NULL, 64, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
 #else
-    uint8_t *code = (uint8_t *)mmap(nullptr, 64, PROT_READ | PROT_WRITE | PROT_EXEC, MAP_PRIVATE | MAP_ANON, -1, 0);
+    u8 *code = (u8 *)mmap(nullptr, 64, PROT_READ | PROT_WRITE | PROT_EXEC, MAP_PRIVATE | MAP_ANON, -1, 0);
 #endif
 
     size_t offset = 0;
@@ -27,7 +27,7 @@ void JIT::translate_and_run(CPU &cpu)
     {                          // MOVZ placeholder
         code[offset++] = 0x48; // mov rax, imm64
         code[offset++] = 0xB8;
-        uint64_t imm = 5;
+        u64 imm = 5;
         std::memcpy(&code[offset], &imm, sizeof(imm));
         offset += 8;
     }
@@ -36,7 +36,7 @@ void JIT::translate_and_run(CPU &cpu)
     {                          // ADD placeholder
         code[offset++] = 0x48; // add rax, imm32
         code[offset++] = 0x05;
-        uint32_t addval = 3;
+        u32 addval = 3;
         std::memcpy(&code[offset], &addval, sizeof(addval));
         offset += 4;
     }
@@ -44,7 +44,7 @@ void JIT::translate_and_run(CPU &cpu)
     code[offset++] = 0xC3; // ret
 
     JitFunc fn = reinterpret_cast<JitFunc>(code);
-    uint64_t result;
+    u64 result;
     asm volatile(
         "call *%1\n"
         "mov %%rax, %0\n"

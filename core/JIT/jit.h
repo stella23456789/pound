@@ -1,5 +1,7 @@
-#ifndef JIT_H
-#define JIT_H
+// Copyright 2025 Pound Emulator Project. All rights reserved.
+
+#pragma once
+
 #include "ARM/cpu.h"
 
 class JIT
@@ -7,5 +9,3 @@ class JIT
 public:
     void translate_and_run(CPU &cpu);
 };
-
-#endif
