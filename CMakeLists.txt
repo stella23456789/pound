@@ -21,6 +21,7 @@ endif()
 project(Pound)
 
 find_package(fmt 10.2.1 CONFIG)
+find_package(toml11 4.4.0 CONFIG)
 
 include_directories(core)
 add_subdirectory(3rd_Party)
@@ -32,10 +33,14 @@ add_executable(Pound
   ${Core}
 )
 
+target_precompile_headers(Pound PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/core/Base/Types.h)
+
 # Link libraries
-target_link_libraries(Pound PRIVATE fmt::fmt)
+target_link_libraries(Pound PRIVATE fmt::fmt toml11::toml11)
 
 if (WIN32)
+  add_compile_definitions(NOMINMAX WIN32_LEAN_AND_MEAN)
+
   # Disables Warnings
   add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
 endif()

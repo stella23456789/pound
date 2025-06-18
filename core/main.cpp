@@ -1,9 +1,18 @@
+// Copyright 2025 Pound Emulator Project. All rights reserved.
+
+#include "Base/Logging/Backend.h"
+
 #include "ARM/cpu.h"
 #include "JIT/jit.h"
 
-#include <cstdio>
-
 int main() {
+
+    Base::Log::Initialize();
+    Base::Log::Start();
+
+    const auto config_dir = Base::FS::GetUserPath(Base::FS::PathType::BinaryDir);
+    Config::Load(config_dir / "config.toml");
+
     CPU cpu;
     cpu.pc = 0;
 
@@ -13,13 +22,14 @@ int main() {
     cpu.write_byte(4, 0x03); // ADD placeholder
     cpu.write_byte(8, 0xFF); // RET placeholder
 
-    printf("%u\n", cpu.read_byte(0));
+    LOG_INFO(ARM, "{}", cpu.read_byte(0));
 
     JIT jit;
     jit.translate_and_run(cpu);
 
     cpu.print_debug_information();
 
-    printf("X0 = %llu\n", cpu.x(0));
+    LOG_INFO(ARM, "X0 = {}", cpu.x(0));
+
     return 0;
 }
