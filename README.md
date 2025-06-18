@@ -1,8 +1,8 @@
 <h1 align="center">
 <img src="/assets/Logo(1024x1024).webp" height="150px">
 <br><br>
-<img src="https://img.shields.io/github/stars/OwnedByWuigi/pound" width="80">
-  <a href="https://github.com/OwnedByWuigi/pound/actions"><img src="https://img.shields.io/badge/Latest universal build-is here-aa00aa.svg"></a>
+<img src="https://img.shields.io/github/stars/pound-emu/pound" width="100">
+  <a href="https://github.com/pound-emu/pound/actions?query=branch%3Amain"><img src="https://img.shields.io/badge/Latest Builds-Here-aa00aa.svg" width="150"></a>
 <br><br>
 Pound
 </h1>
@@ -10,6 +10,8 @@ Pound
 <p align="center">“i think of getting pounded when i see that [name]” - Satisfied Customer</p>
 
 ## Overview
+
+Join the [**Pound Discord Server**](https://discord.gg/aMmTmKsVC7)!
 
 **Pound** is an early **Nintendo Switch 2** emulator for Android, macOS (Intel and ARM), Windows and Linux (Intel and ARM).
 
@@ -30,3 +32,7 @@ All reused code will be explicitly documented and credited in the appropriate se
 ## Contributing and working on Pound
 
 (coming soon)
+
+## License
+
+- [**GPL-3.0 license**](https://github.com/pound-emu/pound/blob/main/LICENSE)
