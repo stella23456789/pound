@@ -100,7 +100,7 @@ jobs:
     needs: get-info
     strategy:
       matrix:
-        arch: [x86_64, arm64]
+        arch: [arm64, x86_64]
     steps:
       - uses: actions/checkout@main
         with:
