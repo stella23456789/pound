@@ -2,6 +2,8 @@
 
 #include "jit.h"
 
+#include <rem.h>
+
 #ifdef WIN32
 #include <Windows.h>
 #else
@@ -12,8 +14,11 @@
 
 using JitFunc = void (*)();
 
-void JIT::translate_and_run(CPU &cpu)
-{
+void JIT::translate_and_run(CPU &cpu) {
+
+// TODO: Create REM Context
+create_rem_context(nullptr, nullptr, nullptr, nullptr, nullptr);
+
 #ifdef WIN32
     u8 *code = (u8 *)VirtualAlloc(NULL, 64, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
 #else
