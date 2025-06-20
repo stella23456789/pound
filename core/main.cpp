@@ -1,5 +1,7 @@
 // Copyright 2025 Pound Emulator Project. All rights reserved.
 
+#include <thread>
+
 #include "Base/Logging/Backend.h"
 
 #include <SDL3/SDL.h>
@@ -63,6 +65,7 @@ int main() {
     bool rendering = true;
 
     while (rendering) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
         // Process events.
         while (SDL_PollEvent(&windowEvent)) {
             switch (windowEvent.type) {
