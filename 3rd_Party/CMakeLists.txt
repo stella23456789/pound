@@ -17,6 +17,14 @@ if (NOT TARGET rem)
   add_subdirectory(rem)
 endif()
 
+# SDL3
+if (NOT TARGET SDL3::SDL3)
+  set(SDL_DISKAUDIO OFF)
+  set(SDL_TEST_LIBRARY OFF)
+  set(SDL_PIPEWIRE OFF)
+  add_subdirectory(SDL3)
+endif()
+
 # Toml11
 if (NOT TARGET toml11::toml11)
   add_subdirectory(toml11)

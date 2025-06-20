@@ -7,3 +7,6 @@
 [submodule "3rd_Party/rem"]
 	path = 3rd_Party/rem
 	url = https://github.com/pound-emu/rem.git
+[submodule "3rd_Party/SDL3"]
+	path = 3rd_Party/SDL3
+	url = https://github.com/libsdl-org/SDL.git
