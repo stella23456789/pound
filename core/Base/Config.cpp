@@ -7,9 +7,21 @@
 
 namespace Config {
 
+static int widthWindow = 640;
+
+static int heightWindow = 480;
+
 static bool logAdvanced = false;
 
 static std::string typeLog = "async";
+
+int windowWidth() {
+  return widthWindow;
+}
+
+int windowHeight() {
+  return heightWindow;
+}
 
 bool isLogAdvanced() {
   return logAdvanced;
@@ -38,6 +50,9 @@ void Load(const std::filesystem::path& path) {
   if (data.contains("General")) {
     const toml::value& general = data.at("General");
 
+    widthWindow = toml::find_or<int>(general, "Window Width", 640);
+    heightWindow = toml::find_or<int>(general, "Window Height", 480);
+
     logAdvanced = toml::find_or<bool>(general, "Advanced Log", false);
     typeLog = toml::find_or<std::string>(general, "Log Type", "async");
   }
@@ -61,6 +76,8 @@ void Save(const std::filesystem::path& path) {
     fmt::print("Saving new configuration file {}\n", path.string());
   }
 
+  data["General"]["Window Width"] = widthWindow;
+  data["General"]["Window Height"] = heightWindow;
   data["General"]["Advanced Log"] = logAdvanced;
   data["General"]["Log Type"] = typeLog;
 

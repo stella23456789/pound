@@ -9,6 +9,10 @@ namespace Config {
 void Load(const std::filesystem::path& path);
 void Save(const std::filesystem::path& path);
 
+int windowWidth();
+
+int windowHeight();
+
 bool isLogAdvanced();
 
 std::string logType();
