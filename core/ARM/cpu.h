@@ -12,9 +12,13 @@ struct CPU {
     static constexpr size_t MEM_SIZE = 64 * 1024;
     u8 memory[MEM_SIZE];
 
-    CPU() { std::memset(memory, 0, MEM_SIZE); }
+    CPU() {
+        std::memset(memory, 0, MEM_SIZE);
+    }
 
-    u64 &x(int i) { return regs[i]; }
+    u64& x(int i) {
+        return regs[i];
+    }
 
     u8 read_byte(u64 addr) {
         if (addr >= MEM_SIZE) {

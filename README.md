@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="/assets/Logo(1024x1024).webp" height="150px">
+  <img src="/resources/Logo(1024x1024).webp" height="150px">
   <br><br>
   <img src="https://img.shields.io/github/stars/pound-emu/pound" width="100">
   <a href="https://github.com/pound-emu/pound/actions?query=branch%3Amain">
@@ -15,7 +15,9 @@
 
 Join the [**Pound Discord Server**](https://discord.gg/aMmTmKsVC7)!
 
-**Pound** is an early-stage emulator for the **Nintendo Switch 2**, targeting **Android**, **macOS** (Intel and ARM), **Windows**, and **Linux** (Intel and ARM).
+**Pound** is an early-stage emulator for the **Nintendo Switch 2**, targeting **Windows**, **Linux** and **macOS** (Intel).
+
+Future Supports: **Android**, **macOS ARM**
 
 > [!IMPORTANT]  
 > Pound is still in early development — don't expect miracles.
@@ -25,7 +27,7 @@ Initial focus is on implementing the **CPU**, leveraging its architectural simil
 
 ## How to Compile Pound
 
-See the [**compilation guide**](/docs/compguide.md) for detailed instructions.
+See the [**compilation guide**](/resources/docs/compguide.md) for detailed instructions.
 
 
 ## Codebase
