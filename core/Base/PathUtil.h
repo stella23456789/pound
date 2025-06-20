@@ -11,9 +11,10 @@ namespace Base {
 namespace FS {
 
 enum class PathType {
-  BinaryDir,  // Binary Path
-  RootDir,    // Execution Path
-  LogDir,     // Where log files are stored
+  BinaryDir,   // Binary Path
+  FirmwareDir, // Where log files are stored
+  RootDir,     // Execution Path
+  LogDir,      // Where log files are stored
 };
 
 enum FileType {
@@ -28,6 +29,8 @@ typedef struct _FileInfo {
   size_t fileSize;    // File size
   FileType fileType;  // File Type (directory/file)
 } FileInfo;
+
+constexpr auto FW_DIR = "firmware";
 
 constexpr auto LOG_DIR = "log";
 

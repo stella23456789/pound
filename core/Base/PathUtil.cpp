@@ -63,10 +63,12 @@ static auto UserPaths = [] {
   if (nixos) {
     currentDir /= "files";
     insert_path(PathType::RootDir, currentDir);
+    insert_path(PathType::FirmwareDir, currentDir / FW_DIR);
     insert_path(PathType::LogDir, currentDir / LOG_DIR);
   }
   else {
     insert_path(PathType::RootDir, currentDir, false);
+    insert_path(PathType::FirmwareDir, binaryDir / FW_DIR);
     insert_path(PathType::LogDir, binaryDir / LOG_DIR);
   }
   return paths;
