@@ -54,10 +54,17 @@ then:
 
 ```bash
 cd pound
-
 ```
 
-lastly:
+To initialize the submodules, direct to ``3rd_Party`` and than run ``git submodule update --init --recursive``
+
+```bash
+cd 3rd_Party
+git submodule update --init --recursive
+cd ..
+```
+
+lastly (in the pound directory not 3rd_Party) run:
 
 ```bash
 cmake -G Ninja -B . -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
