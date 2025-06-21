@@ -27,7 +27,7 @@ Initial focus is on implementing the **CPU**, leveraging its architectural simil
 
 ## How to Compile Pound
 
-See the [**compilation guide**](/resources/docs/compguide.md) for detailed instructions.
+See the [**compilation guide**](/resources/docs/compguide.md) for detailed instructions on how to compile Pound.
 
 
 ## Codebase
