@@ -31,3 +31,21 @@ and then:
 ``cmake -G Ninja -B (where you put pound source code) -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++``
 
 ## Linux (Arch/SteamOS)
+
+Run the following commands in your terminal:
+``
+sudo pacman -S ninja clang lld cmake ccache libx11 libxext libxrandr libxcursor libxi libxinerama libxkbcommon wayland-protocols git
+``
+
+Now:
+``git clone https://www.github.com/pound-emu/pound.git``
+
+then:
+``
+cd pound
+``
+
+lastly:
+``
+cmake -G Ninja -B . -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+``
