@@ -424,6 +424,7 @@ third_party/cmake_install.cmake
 CMakeFiles
 CMakeCache.txt
 cmake_install.cmake
-.ninja_log
-.ninja_deps
+*.ninja_log
+*.ninja_deps
+build.ninja
 3rd_Party/rem
