@@ -47,14 +47,13 @@ sudo pacman -S ninja clang lld cmake ccache libx11 libxext libxrandr libxcursor 
 Now:
 
 ```bash
-git clone https://www.github.com/pound-emu/pound.git --recursive
+git clone https://www.github.com/pound-emu/pound.git
 ```
 
 then:
 
 ```bash
 cd pound
-cmake -G Ninja -B . -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
 ```
 
 To initialize the submodules, direct to ``3rd_Party`` and than run ``git submodule update --init --recursive``
