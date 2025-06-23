@@ -6,6 +6,7 @@ set(CMAKE_C_STANDARD 17)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_C_STANDARD_REQUIRED TRUE)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+set(IMGUI_DIR ${CMAKE_CURRENT_SOURCE_DIR}/3rd_Party/imgui)
 
 if (NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
@@ -47,3 +48,26 @@ if (WIN32)
 
   target_sources(Pound PRIVATE core/Pound.rc)
 endif()
+
+
+# ImGui
+set(IMGUI_SRC
+    ${IMGUI_DIR}/imgui.cpp
+    ${IMGUI_DIR}/imgui_demo.cpp
+    ${IMGUI_DIR}/imgui_draw.cpp
+    ${IMGUI_DIR}/imgui_tables.cpp
+    ${IMGUI_DIR}/imgui_widgets.cpp
+    ${IMGUI_DIR}/backends/imgui_impl_sdl3.cpp
+    ${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp
+)
+
+target_sources(Pound PRIVATE ${IMGUI_SRC})
+
+target_include_directories(Pound PRIVATE
+    ${IMGUI_DIR}
+    ${IMGUI_DIR}/backends
+)
+
+find_package(OpenGL REQUIRED)
+target_link_libraries(Pound PRIVATE OpenGL::GL)
+
