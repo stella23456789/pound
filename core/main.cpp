@@ -1,16 +1,20 @@
 // Copyright 2025 Pound Emulator Project. All rights reserved.
-
 #include <thread>
+#include <imgui.h>
+#include <imgui_impl_sdl3.h>
+#include <imgui_impl_opengl3.h>
 
 #include "Base/Logging/Backend.h"
 
 #include <SDL3/SDL.h>
+#include <SDL3/SDL_opengl.h>
 
 #include "ARM/cpu.h"
 #include "Base/Config.h"
 #include "JIT/jit.h"
 
-SDL_Window *Window{};
+SDL_Window* Window{};
+SDL_GLContext gl_context{};
 SDL_Event windowEvent;
 
 void initSDL3() {
@@ -33,6 +37,29 @@ void initSDL3() {
     SDL_DestroyProperties(props);
 
     SDL_SetWindowMinimumSize(Window, 640, 480);
+
+    gl_context = SDL_GL_CreateContext(Window);
+    if (!gl_context) {
+        LOG_ERROR(Render, "Failed to create OpenGL context: {}", SDL_GetError());
+    }
+
+    SDL_GL_MakeCurrent(Window, gl_context);
+    SDL_GL_SetSwapInterval(1);
+
+    ImGui::CreateContext();
+    ImGui::StyleColorsDark();
+    ImGui_ImplSDL3_InitForOpenGL(Window, gl_context);
+    ImGui_ImplOpenGL3_Init("#version 330");
+
+}
+
+void deinitializeSDL3() {
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplSDL3_Shutdown();
+    ImGui::DestroyContext();
+
+    SDL_DestroyWindow(Window);
+    SDL_Quit();
 }
 
 int main() {
@@ -66,20 +93,41 @@ int main() {
     bool rendering = true;
 
     while (rendering) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(50));
         // Process events.
         while (SDL_PollEvent(&windowEvent)) {
+            ImGui_ImplSDL3_ProcessEvent(&windowEvent);
+
             switch (windowEvent.type) {
-                case SDL_EVENT_QUIT:
-                SDL_DestroyWindow(Window);
-                SDL_Quit();
+            case SDL_EVENT_QUIT:
                 rendering = false;
-            break;
+                break;
             default:
-            break;
+                break;
             }
         }
+
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplSDL3_NewFrame();
+        ImGui::NewFrame();
+
+        ImGui::Begin("Demo");
+        ImGui::Text("Hello, Pound Emulator!");
+        ImGui::End();
+
+        ImGui::Render();
+        ImGuiIO& io = ImGui::GetIO();
+
+        glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+        SDL_GL_SwapWindow(Window);
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
     }
 
+    deinitializeSDL3();
     return 0;
 }
