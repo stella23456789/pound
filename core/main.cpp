@@ -1,4 +1,5 @@
 // Copyright 2025 Pound Emulator Project. All rights reserved.
+
 #include <thread>
 #include <imgui.h>
 #include <imgui_impl_sdl3.h>
@@ -62,16 +63,7 @@ void deinitializeSDL3() {
     SDL_Quit();
 }
 
-int main() {
-
-    Base::Log::Initialize();
-    Base::Log::Start();
-
-    const auto config_dir = Base::FS::GetUserPath(Base::FS::PathType::BinaryDir);
-    Config::Load(config_dir / "config.toml");
-
-    initSDL3();
-
+void cpuTest() {
     CPU cpu;
     cpu.pc = 0;
 
@@ -89,6 +81,17 @@ int main() {
     cpu.print_debug_information();
 
     LOG_INFO(ARM, "X0 = {}", cpu.x(0));
+}
+
+int main() {
+
+    Base::Log::Initialize();
+    Base::Log::Start();
+
+    const auto config_dir = Base::FS::GetUserPath(Base::FS::PathType::BinaryDir);
+    Config::Load(config_dir / "config.toml");
+
+    initSDL3();
 
     bool rendering = true;
 
@@ -108,14 +111,21 @@ int main() {
 
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplSDL3_NewFrame();
+        ImGui::SetNextWindowSizeConstraints(ImVec2(50.0f, 50.0f), ImVec2(FLT_MAX, FLT_MAX));
         ImGui::NewFrame();
 
-        ImGui::Begin("Demo");
-        ImGui::Text("Hello, Pound Emulator!");
+        ImGui::Begin("Pound Emulator");
+
+        if (ImGui::Button("Run CPU Test")) {
+            cpuTest();
+        }
+
         ImGui::End();
 
         ImGui::Render();
         ImGuiIO& io = ImGui::GetIO();
+        ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 5.0f);
+        ImGui::PushStyleVar(ImGuiStyleVar_FrameRounding, 3.0f);
 
         glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
@@ -125,7 +135,7 @@ int main() {
 
         SDL_GL_SwapWindow(Window);
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(50));
+        std::this_thread::sleep_for(std::chrono::milliseconds(5));
     }
 
     deinitializeSDL3();
