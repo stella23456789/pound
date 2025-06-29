@@ -8,7 +8,8 @@
 
 # No firmware or system files are provided with this emulator.
 
-(linux only rn bc lazy)
+## Windows (10/11/vNext, Server 2016/2019/20h2/21h2/2022/22h2/23h2/24h2/2025/vNext)
+(soon)
 
 ## Linux (Fedora/RHEL/openSUSE)
 
