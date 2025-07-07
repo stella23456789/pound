@@ -84,7 +84,6 @@ void cpuTest() {
 }
 
 int main() {
-
     Base::Log::Initialize();
     Base::Log::Start();
 
@@ -94,6 +93,7 @@ int main() {
     initSDL3();
 
     bool rendering = true;
+    bool show_popup = false; // Flag to control popup visibility
 
     while (rendering) {
         // Process events.
@@ -118,9 +118,28 @@ int main() {
 
         if (ImGui::Button("Run CPU Test")) {
             cpuTest();
+            show_popup = true; // Trigger the popup after running the test
         }
 
         ImGui::End();
+
+        // Popup logic
+        if (show_popup) {
+            ImGui::OpenPopup("CPU Test Info");
+        }
+
+        // Define the modal popup
+        if (ImGui::BeginPopupModal("CPU Test Info", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+            ImGui::Text("The CPU test has ran in the terminal.\nKeep in mind that Pound is still in pre-alpha state.");
+            ImGui::Separator();
+
+            if (ImGui::Button("OK", ImVec2(120, 0))) {
+                show_popup = false; // Close the popup
+                ImGui::CloseCurrentPopup();
+            }
+
+            ImGui::EndPopup();
+        }
 
         ImGui::Render();
         ImGuiIO& io = ImGui::GetIO();
