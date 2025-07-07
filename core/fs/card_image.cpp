@@ -6,7 +6,7 @@
 #include <array>
 #include <string>
 
-#include "3rd_Party/fmt/include/fmt/ostream.h"
+#include <fmt/include/fmt/ostream.h>
 
 #include "common/logging/log.h"
 #include "core/crypto/key_manager.h"
