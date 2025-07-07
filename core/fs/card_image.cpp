@@ -6,10 +6,10 @@
 #include <array>
 #include <string>
 
-#include <fmt/ostream.h> //can't find that yet (ownedbywuigi)
+#include "3rd_Party/fmt/include/fmt/ostream.h"
 
-#include "import/common/logging/log.h"
-#include "import/core/crypto/key_manager.h"
+#include "common/logging/log.h"
+#include "core/crypto/key_manager.h"
 #include "core/fs/card_image.h"
 #include "core/fs/content_archive.h"
 #include "core/fs/nca_metadata.h"
