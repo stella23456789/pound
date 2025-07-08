@@ -5,9 +5,9 @@
 
 #include <fmt/format.h>
 #include "../common/fs/path_util.h"
-#include "core/fs/bis_factory.h"
-#include "core/fs/registered_cache.h"
-#include "core/fs/vfs/vfs.h"
+#include "bis_factory.h"
+#include "registered_cache.h"
+#include "vfs/vfs.h"
 
 namespace FileSys {
 

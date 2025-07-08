@@ -8,16 +8,16 @@
 
 #include <fmt/ostream.h>
 
-#include "common/logging/log.h"
-#include "core/crypto/key_manager.h"
-#include "core/fs/card_image.h"
-#include "core/fs/content_archive.h"
-#include "core/fs/nca_metadata.h"
-#include "core/fs/partition_filesystem.h"
-#include "core/fs/submission_package.h"
-#include "core/fs/vfs/vfs_offset.h"
-#include "core/fs/vfs/vfs_vector.h"
-#include "core/loader/loader.h"
+#include "../common/logging/log.h"
+#include "crypto/key_manager.h"
+#include "card_image.h"
+#include "content_archive.h"
+#include "nca_metadata.h"
+#include "partition_filesystem.h"
+#include "submission_package.h"
+#include "vfs/vfs_offset.h"
+#include "vfs/vfs_vector.h"
+#include "loader/loader.h"
 
 namespace FileSys {
 
