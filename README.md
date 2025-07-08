@@ -11,6 +11,11 @@
 
 <p align="center"><em>“i think of getting pounded when i see that [name]” – Satisfied Customer</em></p>
 
+
+> [!NOTE]
+> This project is still being worked on, and we **really** need help as we only have a few developers.   
+> If you know C++ and think you can help out, hop into the Discord and let us know. :)
+
 ## Overview
 
 Join the [**Pound Discord Server**](https://discord.gg/aMmTmKsVC7)!
@@ -19,10 +24,17 @@ Join the [**Pound Discord Server**](https://discord.gg/aMmTmKsVC7)!
 
 Future Supports: **Android**, **macOS ARM**
 
-> [!IMPORTANT]  
-> Pound is still in early development — don't expect miracles.
 
-Initial focus is on implementing the **CPU**, leveraging its architectural similarities to the original Nintendo Switch. Later stages will address differences in hardware between the two console generations.
+Initial focus is on implementing the architectural similarities to the original Nintendo Switch. Later stages of development will address differences in hardware between the two console generations.
+
+## Disclaimer
+
+The goal of this project is to experiment, research, and educate on the topic
+of emulation of modern devices and operating systems. **It is not for enabling
+illegal activity**. All information is obtained via reverse engineering of
+legally purchased devices and games and information made public on the internet
+(you'd be surprised what's indexed on Google...). We are not any way affiliated
+with Nintendo or NVidia.
 
 
 ## How to Compile Pound
@@ -49,4 +61,3 @@ All third-party code is clearly documented and properly attributed in the releva
 ## Credits
 
 - Parts of the emulator are based on code from the Yuzu project.
-- The phrase *"don't expect miracles"* is borrowed from the [**oboromi**](https://github.com/Nikilites/oboromi) project by **Nikilite** — a Nintendo Switch 2 emulator written in Rust.
