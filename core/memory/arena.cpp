@@ -1,6 +1,6 @@
 #include "arena.h"
 #include "Base/Assert.h"
-#include "sys/mman.h" // Required for mmap and MAP_FAILED
+#include "sys/mman.h"
 
 // Memory::Arena Memory::arena_init() {
 //     // TODO(GloriousTaco): The line below is stupidly unsafe. Replace malloc with mmap() and check the return value.
@@ -27,7 +27,7 @@ Memory::Arena Memory::arena_init() {
     };
     return arena;
 }
-// new more memsafe code (ownedbywuigi)
+// new more memsafe code (ownedbywuigi) (i give up on windows compatibility for now, will stick to the old unsafe code)
 
 const uint8_t* Memory::arena_allocate(Memory::Arena* arena,
                                       const std::size_t size) {
