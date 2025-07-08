@@ -7,7 +7,7 @@
 
 #include <memory>
 
-#include "..common/common_types.h"
+#include "../common/common_types.h"
 #include "vfs/vfs_types.h"
 
 namespace FileSys {
