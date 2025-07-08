@@ -1,17 +1,34 @@
 #include "arena.h"
 #include "Base/Assert.h"
+#include <sys/mman.h> // Required for mmap and MAP_FAILED
+
+// Memory::Arena Memory::arena_init() {
+//     // TODO(GloriousTaco): The line below is stupidly unsafe. Replace malloc with mmap() and check the return value.
+//     auto data =
+//         static_cast<uint8_t*>(malloc(sizeof(uint8_t) * MEMORY_CAPACITY));
+//     Memory::Arena arena = {
+//         .capacity = MEMORY_CAPACITY,
+//         .size = 0,
+//         .data = data,
+//     };
+//     return arena;
+// }
+// old unsafe code
 
 Memory::Arena Memory::arena_init() {
-    // TODO(GloriousTaco): The line below is stupidly unsafe. Replace malloc with mmap() and check the return value.
-    auto data =
-        static_cast<uint8_t*>(malloc(sizeof(uint8_t) * MEMORY_CAPACITY));
+    void* data = mmap(nullptr, MEMORY_CAPACITY, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
+    if (data == MAP_FAILED) {
+        return {0, 0, nullptr}; // Return invalid arena on failure
+    }
     Memory::Arena arena = {
         .capacity = MEMORY_CAPACITY,
         .size = 0,
-        .data = data,
+        .data = static_cast<uint8_t*>(data),
     };
     return arena;
 }
+// new more memsafe code (ownedbywuigi)
+
 const uint8_t* Memory::arena_allocate(Memory::Arena* arena,
                                       const std::size_t size) {
     ASSERT(arena != nullptr);
