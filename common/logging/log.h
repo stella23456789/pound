@@ -6,10 +6,10 @@
 #include <algorithm>
 #include <string_view>
 
-#include <fmt/include/fmt/format.h>
+#include <fmt/format.h>
 
-#include "common/logging/formatter.h"
-#include "common/logging/types.h"
+#include "formatter.h"
+#include "types.h"
 
 namespace Common::Log {
 

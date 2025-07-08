@@ -6,19 +6,19 @@
 #include <optional>
 #include <utility>
 
-#include "common/logging/log.h"
-#include "common/polyfill_ranges.h"
-#include "core/crypto/aes_util.h"
-#include "core/crypto/ctr_encryption_layer.h"
-#include "core/crypto/key_manager.h"
-#include "core/file_sys/content_archive.h"
-#include "core/file_sys/partition_filesystem.h"
-#include "core/file_sys/vfs/vfs_offset.h"
-#include "core/loader/loader.h"
+#include "../common/logging/log.h"
+#include "../common/polyfill_ranges.h"
+#include "../core/crypto/aes_util.h"
+#include "../core/crypto/ctr_encryption_layer.h"
+#include "../core/crypto/key_manager.h"
+#include "content_archive.h"
+#include "partition_filesystem.h"
+#include "vfs/vfs_offset.h"
+#include "../core/loader/loader.h"
 
-#include "core/file_sys/fssystem/fssystem_compression_configuration.h"
-#include "core/file_sys/fssystem/fssystem_crypto_configuration.h"
-#include "core/file_sys/fssystem/fssystem_nca_file_system_driver.h"
+#include "fssystem/fssystem_compression_configuration.h"
+#include "fssystem/fssystem_crypto_configuration.h"
+#include "fssystem/fssystem_nca_file_system_driver.h"
 
 namespace FileSys {
 

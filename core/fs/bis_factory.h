@@ -7,8 +7,8 @@
 
 #include <memory>
 
-#include "import/common/common_types.h"
-#include "core/fs/vfs/vfs_types.h"
+#include "..common/common_types.h"
+#include "vfs/vfs_types.h"
 
 namespace FileSys {
 
