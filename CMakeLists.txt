@@ -27,6 +27,7 @@ find_package(toml11 4.4.0 CONFIG)
 
 include_directories(core)
 add_subdirectory(3rd_Party)
+add_subdirectory(3rd_Party/fmt)
 
 
 file(GLOB_RECURSE Core core/*.cpp core/*.h)
