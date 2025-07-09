@@ -14,6 +14,10 @@ namespace Pound::GUI
 
     void ConsolePanel::Render()
     {
+        if (!visible) {
+            return;
+        }
+        
         if (!ImGui::Begin(name.c_str(), &visible))
         {
             ImGui::End();
