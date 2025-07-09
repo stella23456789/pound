@@ -13,10 +13,6 @@ namespace Pound::GUI
 
     void PerformancePanel::Render()
     {
-        if (!visible) {
-            return;
-        }
-
         if (!ImGui::Begin(name.c_str(), &visible))
         {
             ImGui::End();
