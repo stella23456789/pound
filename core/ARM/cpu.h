@@ -40,4 +40,9 @@ struct CPU {
             LOG_INFO(ARM, "X{} = {}", reg, x(reg)); // X0 = 0...
         }
     }
+
+    void get_state(u64* out_regs, u64& out_pc) const {
+        std::memcpy(out_regs, regs, sizeof(regs));
+        out_pc = pc;
+    }
 };
