@@ -71,3 +71,5 @@ target_include_directories(Pound PRIVATE
 find_package(OpenGL REQUIRED)
 target_link_libraries(Pound PRIVATE OpenGL::GL)
 
+# add ./gui directory
+add_subdirectory(gui)
