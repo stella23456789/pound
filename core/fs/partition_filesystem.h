@@ -6,10 +6,10 @@
 #include <array>
 #include <string>
 #include <vector>
-#include "common/common_funcs.h"
-#include "common/common_types.h"
-#include "common/swap.h"
-#include "core/file_sys/vfs/vfs.h"
+#include "../common/common_funcs.h"
+#include "../common/common_types.h"
+#include "../common/swap.h"
+#include "../core/fs/vfs/vfs.h"
 
 namespace Loader {
 enum class ResultStatus : u16;

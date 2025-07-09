@@ -8,9 +8,9 @@
 #include <optional>
 #include <string>
 #include "common/common_types.h"
-#include "core/file_sys/nca_metadata.h"
-#include "core/file_sys/vfs/vfs_types.h"
-#include "core/memory/dmnt_cheat_types.h"
+#include "../core/fs/nca_metadata.h"
+#include "../core/fs/vfs/vfs_types.h"
+#include "../core/memory/dmnt_cheat_types.h"
 
 namespace Core {
 class System;

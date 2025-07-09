@@ -5,19 +5,19 @@
 #include <random>
 #include <regex>
 #include <mbedtls/sha256.h>
-#include "common/assert.h"
-#include "common/fs/path_util.h"
-#include "common/hex_util.h"
-#include "common/logging/log.h"
-#include "common/scope_exit.h"
-#include "core/crypto/key_manager.h"
-#include "core/file_sys/card_image.h"
-#include "core/file_sys/common_funcs.h"
-#include "core/file_sys/content_archive.h"
-#include "core/file_sys/nca_metadata.h"
-#include "core/file_sys/registered_cache.h"
-#include "core/file_sys/submission_package.h"
-#include "core/file_sys/vfs/vfs_concat.h"
+#include "../common/assert.h"
+#include "../common/fs/path_util.h"
+#include "../common/hex_util.h"
+#include "../common/logging/log.h"
+#include "../common/scope_exit.h"
+#include "../core/crypto/key_manager.h"
+#include "card_image.h"
+#include "common_funcs.h"
+#include "content_archive.h"
+#include "nca_metadata.h"
+#include "registered_cache.h"
+#include "submission_package.h"
+#include "../core/fs/vfs/vfs_concat.h"
 #include "core/loader/loader.h"
 
 namespace FileSys {

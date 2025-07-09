@@ -4,11 +4,11 @@
 #include <cstddef>
 #include <vector>
 
-#include "common/logging/log.h"
-#include "common/scope_exit.h"
-#include "core/file_sys/program_metadata.h"
-#include "core/file_sys/vfs/vfs.h"
-#include "core/loader/loader.h"
+#include "../common/logging/log.h"
+#include "../common/scope_exit.h"
+#include "../core/file_sys/program_metadata.h"
+#include "../core/file_sys/vfs/vfs.h"
+#include "../core/loader/loader.h"
 
 namespace FileSys {
 
