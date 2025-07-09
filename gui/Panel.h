@@ -16,7 +16,7 @@ namespace Pound::GUI
         virtual void Render() = 0;
 
         const std::string &GetName() const { return name; }
-        bool* IsVisible() { return &visible; }
+        bool IsVisible() const { return visible; }
         void SetVisible(bool vis) { visible = vis; }
 
     protected:
