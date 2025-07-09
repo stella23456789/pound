@@ -12,10 +12,10 @@ Memory::Arena Memory::arena_init() {
 #else
     void* data = mmap(nullptr, MEMORY_CAPACITY, PROT_READ | PROT_WRITE,
                       MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
-#endif
     if (data == MAP_FAILED) {
         return {0, 0, nullptr};  // Return invalid arena on failure
     }
+#endif
     Memory::Arena arena = {
         .capacity = MEMORY_CAPACITY,
         .size = 0,
