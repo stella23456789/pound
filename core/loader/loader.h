@@ -11,10 +11,10 @@
 #include <utility>
 #include <vector>
 
-#include "common/common_funcs.h"
-#include "common/common_types.h"
-#include "fs/control_metadata.h"
-#include "fs/vfs/vfs.h"
+#include "../common/common_funcs.h"
+#include "../common/common_types.h"
+#include "../core/fs/control_metadata.h"
+#include "../core/fs/vfs/vfs.h"
 
 namespace Core {
 class System;
@@ -31,7 +31,7 @@ class KProcess;
 
 namespace Loader {
 
-/// File types supported by CTR
+/// File types supported by CTR/NX/Ounce
 enum class FileType {
     Error,
     Unknown,
