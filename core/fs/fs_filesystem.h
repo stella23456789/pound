@@ -3,8 +3,8 @@
 
 #pragma once
 
-#include "core/fs/common_funcs.h"
-#include "import/common/common_types.h"
+#include "common_funcs.h"
+#include "../common/common_types.h"
 
 namespace FileSys {
 
