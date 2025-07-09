@@ -13,3 +13,6 @@
 [submodule "3rd_Party/imgui"]
 	path = 3rd_Party/imgui
 	url = https://github.com/ocornut/imgui.git
+[submodule "3rd_Party/boost"]
+	path = 3rd_Party/boost
+	url = https://github.com/boostorg/boost.git
