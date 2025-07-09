@@ -1,6 +1,8 @@
 #include "arena.h"
-#include <sys/mman.h>
 #include "Base/Assert.h"
+#ifndef WIN32
+#include <sys/mman.h>
+#endif
 
 Memory::Arena Memory::arena_init() {
     // TODO(GloriousEggroll): Replace malloc with a windows memory mapping API.
