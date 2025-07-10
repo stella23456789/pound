@@ -4,8 +4,8 @@
 #pragma once
 
 #include <string_view>
-#include "common/common_funcs.h"
-#include "common/common_types.h"
+#include "../common/common_funcs.h"
+#include "../common/common_types.h"
 
 namespace FileSys {
 

@@ -5,10 +5,10 @@
 
 #include <array>
 #include <string>
-#include "common/common_funcs.h"
-#include "common/common_types.h"
-#include "common/swap.h"
-#include "core/file_sys/vfs/vfs_types.h"
+#include "../common/common_funcs.h"
+#include "../common/common_types.h"
+#include "../common/swap.h"
+#include "../core/fs/vfs/vfs_types.h"
 
 namespace FileSys {
 
