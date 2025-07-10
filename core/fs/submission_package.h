@@ -7,9 +7,9 @@
 #include <memory>
 #include <set>
 #include <vector>
-#include "common/common_types.h"
-#include "core/file_sys/nca_metadata.h"
-#include "core/file_sys/vfs/vfs.h"
+#include "../common/common_types.h"
+#include "nca_metadata.h"
+#include "../core/fs/vfs/vfs.h"
 
 namespace Core::Crypto {
 class KeyManager;
