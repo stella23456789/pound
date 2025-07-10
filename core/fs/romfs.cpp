@@ -3,17 +3,17 @@
 
 #include <memory>
 
-#include "common/assert.h"
-#include "common/common_types.h"
-#include "core/fs/fs_string_util.h"
-#include "common/swap.h"
-#include "core/fs/fsmitm_romfsbuild.h"
-#include "core/fs/romfs.h"
-#include "core/fs/vfs/vfs.h"
-#include "core/fs/vfs/vfs_cached.h"
-#include "core/fs/vfs/vfs_concat.h"
-#include "core/fs/vfs/vfs_offset.h"
-#include "core/fs/vfs/vfs_vector.h"
+#include "../common/assert.h"
+#include "../common/common_types.h"
+#include "fs_string_util.h"
+#include "../common/swap.h"
+#include "fsmitm_romfsbuild.h"
+#include "romfs.h"
+#include "../core/fs/vfs/vfs.h"
+#include "../core/fs/vfs/vfs_cached.h"
+#include "../core/fs/vfs/vfs_concat.h"
+#include "../core/fs/vfs/vfs_offset.h"
+#include "../core/fs/vfs/vfs_vector.h"
 
 namespace FileSys {
 namespace {

@@ -2,18 +2,18 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <memory>
-#include "common/assert.h"
-#include "common/common_types.h"
-#include "common/logging/log.h"
-#include "core/file_sys/common_funcs.h"
-#include "core/file_sys/content_archive.h"
-#include "core/file_sys/nca_metadata.h"
-#include "core/file_sys/patch_manager.h"
-#include "core/file_sys/registered_cache.h"
-#include "core/file_sys/romfs_factory.h"
-#include "core/hle/kernel/k_process.h"
-#include "core/hle/service/filesystem/filesystem.h"
-#include "core/loader/loader.h"
+#include "../common/assert.h"
+#include "../common/common_types.h"
+#include "../common/logging/log.h"
+#include "../common_funcs.h"
+#include "../content_archive.h"
+#include "nca_metadata.h"
+#include "patch_manager.h"
+#include "registered_cache.h"
+#include "romfs_factory.h"
+#include "../core/hle/kernel/k_process.h"
+#include "../core/hle/service/filesystem/filesystem.h"
+#include "../core/loader/loader.h"
 
 namespace FileSys {
 

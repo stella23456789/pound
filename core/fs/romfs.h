@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include "core/fs/vfs/vfs.h"
+#include "../core/fs/vfs/vfs.h"
 
 namespace FileSys {
 

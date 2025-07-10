@@ -2,13 +2,13 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <memory>
-#include "common/assert.h"
-#include "common/common_types.h"
-#include "common/logging/log.h"
-#include "common/uuid.h"
-#include "core/core.h"
-#include "core/file_sys/savedata_factory.h"
-#include "core/file_sys/vfs/vfs.h"
+#include "../common/assert.h"
+#include "../common/common_types.h"
+#include "../common/logging/log.h"
+#include "../common/uuid.h"
+#include "../core/core.h"
+#include "savedata_factory.h"
+#include "../core/fs/vfs/vfs.h"
 
 namespace FileSys {
 

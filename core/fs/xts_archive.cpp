@@ -10,16 +10,16 @@
 #include <mbedtls/md.h>
 #include <mbedtls/sha256.h>
 
-#include "common/fs/path_util.h"
-#include "common/hex_util.h"
-#include "common/string_util.h"
-#include "core/crypto/aes_util.h"
-#include "core/crypto/key_manager.h"
-#include "core/crypto/xts_encryption_layer.h"
-#include "core/file_sys/content_archive.h"
-#include "core/file_sys/vfs/vfs_offset.h"
-#include "core/file_sys/xts_archive.h"
-#include "core/loader/loader.h"
+#include "../common/fs/path_util.h"
+#include "../common/hex_util.h"
+#include "../common/string_util.h"
+#include "../core/crypto/aes_util.h"
+#include "../core/crypto/key_manager.h"
+#include "../core/crypto/xts_encryption_layer.h"
+#include "content_archive.h"
+#include "../core/fs/vfs/vfs_offset.h"
+#include "xts_archive.h"
+#include "../core/loader/loader.h"
 
 namespace FileSys {
 

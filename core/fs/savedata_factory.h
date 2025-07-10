@@ -7,9 +7,9 @@
 #include <string>
 #include "common/common_funcs.h"
 #include "common/common_types.h"
-#include "core/file_sys/fs_save_data_types.h"
-#include "core/file_sys/vfs/vfs.h"
-#include "core/hle/result.h"
+#include "fs_save_data_types.h"
+#include "../core/fs/vfs/vfs.h"
+#include "../core/hle/result.h"
 
 namespace Core {
 class System;

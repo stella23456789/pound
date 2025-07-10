@@ -6,15 +6,15 @@
 
 #include <fmt/ostream.h>
 
-#include "common/hex_util.h"
-#include "common/logging/log.h"
-#include "core/crypto/key_manager.h"
-#include "core/file_sys/content_archive.h"
-#include "core/file_sys/nca_metadata.h"
-#include "core/file_sys/partition_filesystem.h"
-#include "core/file_sys/program_metadata.h"
-#include "core/file_sys/submission_package.h"
-#include "core/loader/loader.h"
+#include "../common/hex_util.h"
+#include "../common/logging/log.h"
+#include "../core/crypto/key_manager.h"
+#include "content_archive.h"
+#include "nca_metadata.h"
+#include "partition_filesystem.h"
+#include "program_metadata.h"
+#include "submission_package.h"
+#include "../core/loader/loader.h"
 
 namespace FileSys {
 
