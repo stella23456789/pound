@@ -7,9 +7,9 @@
 #include <mutex>
 #include <optional>
 #include <string_view>
-#include "common/intrusive_list.h"
-#include "core/file_sys/fs_filesystem.h"
-#include "core/file_sys/vfs/vfs.h"
+#include "../common/intrusive_list.h"
+#include "../core/fs/fs_filesystem.h"
+#include "vfs.h"
 
 namespace Common::FS {
 class IOFile;

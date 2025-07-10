@@ -5,13 +5,13 @@
 #include <cstddef>
 #include <iterator>
 #include <utility>
-#include "common/assert.h"
-#include "common/fs/file.h"
-#include "common/fs/fs.h"
-#include "common/fs/path_util.h"
-#include "common/logging/log.h"
-#include "core/file_sys/vfs/vfs.h"
-#include "core/file_sys/vfs/vfs_real.h"
+#include "../common/assert.h"
+#include "../common/fs/file.h"
+#include "../common/fs/fs.h"
+#include "../common/fs/path_util.h"
+#include "../common/logging/log.h"
+#include "vfs.h"
+#include "vfs_real.h"
 
 // For FileTimeStampRaw
 #include <sys/stat.h>
@@ -21,7 +21,7 @@
 #endif
 
 #ifdef ANDROID
-#include "common/fs/fs_android.h"
+#include "../common/fs/fs_android.h"
 #endif
 
 namespace FileSys {

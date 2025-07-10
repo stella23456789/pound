@@ -4,8 +4,8 @@
 #include <algorithm>
 #include <numeric>
 #include <string>
-#include "common/fs/path_util.h"
-#include "core/file_sys/vfs/vfs.h"
+#include "../common/fs/path_util.h"
+#include "vfs.h"
 
 namespace FileSys {
 

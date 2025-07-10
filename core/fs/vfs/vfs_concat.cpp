@@ -4,9 +4,9 @@
 #include <algorithm>
 #include <utility>
 
-#include "common/assert.h"
-#include "core/file_sys/vfs/vfs_concat.h"
-#include "core/file_sys/vfs/vfs_static.h"
+#include "../common/assert.h"
+#include "vfs_concat.h"
+#include "vfs_static.h"
 
 namespace FileSys {
 

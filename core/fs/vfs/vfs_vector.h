@@ -8,7 +8,7 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include "core/fs/vfs/vfs.h"
+#include "vfs.h"
 
 namespace FileSys {
 
