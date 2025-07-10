@@ -5,7 +5,7 @@
 
 #include <memory>
 
-#include "core/fs/vfs/vfs.h"
+#include "vfs.h"
 
 namespace FileSys {
 
