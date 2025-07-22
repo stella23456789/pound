@@ -15,6 +15,7 @@
 > [!NOTE]
 > This project is still being worked on, and we **really** need help as we only have a few developers.   
 > If you know C++ and think you can help out, hop into the Discord and let us know. :)
+> This PR gives us Mario Kart World in-game
 
 ## Overview
 
